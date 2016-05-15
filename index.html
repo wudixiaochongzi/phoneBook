@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="phoneBook">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>手机联系人</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <script src="js/base.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/pinyin.js"></script>
+</head>
+<body ng-controller="contCtrl">
+    <header>
+        <div class="head">联系人</div>
+        <div class="searchBox clf">
+            <p class="iconfont">&#xe600;</p>
+            <input type="text" placeholder="搜索位联系人" class="search" ng-model="search" ng-change="searchchange()" ng-focus="searchOn()" ng-blur="searchNone()">
+        </div>
+    </header>
+    <div class="out" ng-show="!flag">
+        <div class="contact">
+            <section ng-repeat="f in first | orderBy">
+                <nav>{{f}}</nav>
+                <ul>
+                    <li ng-repeat="a in contacts | orderBy:'+enName' | isFirst:f">{{a.name}}</li>
+                </ul>
+            </section>
+        </div>
+        <div class="leader">
+            <ul>
+                <li class="iconfont leader-on" style="font-size: 0.1rem">&#xe605;</li>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>I</li>
+                <li>J</li>
+                <li>K</li>
+                <li>L</li>
+                <li>M</li>
+                <li>N</li>
+                <li>O</li>
+                <li>P</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>S</li>
+                <li>T</li>
+                <li>U</li>
+                <li>V</li>
+                <li>W</li>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+                <li>#</li>
+            </ul>
+        </div>
+        <footer>
+            新建联系人
+        </footer>
+    </div>
+    <div class="contactSearch" ng-show="flag">
+        <section>
+            <ul>
+                <li ng-repeat="s in contacts | filter:search">
+                    <span>{{s.name}}</span>
+                    <span>{{s.phone}}</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

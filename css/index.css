@@ -1,0 +1,132 @@
+body{
+    font-family: "Microsoft YaHei","Helvetica", "Arial", sans-serif;
+    color: #333;
+}
+*{
+    box-sizing: border-box;
+}
+.clf:after{
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    clear: both;
+}
+.out{
+    background: #fff;
+    margin: 0 auto;
+    width: 10.8rem;
+}
+header{
+    height: 2.36rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+div.contact,div.contactSearch{
+    padding-top: 2.4rem;
+    padding-bottom: 2rem;
+    background: #fff;
+}
+div.contactSearch{
+    display: none;
+    background: #fff;
+    width: 100%;
+    padding-bottom: 0;
+}
+footer{
+    position: fixed;
+    width: 100%;
+    height: 1.8rem;
+    border-top: 1px solid #E7E8E2;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    text-align: center;
+    font-size: 0.48rem;
+    line-height: 1.87rem;
+    z-index: 99;
+}
+div.head{
+    height: 1.36rem;
+    background: #18B3EB;
+    text-align: center;
+    color: #fff;
+    line-height: 1.36rem;
+    font-size: 0.48rem;
+}
+.searchBox{
+    width: 100%;
+    border-top: 1px solid #E7E8E2;
+    border-bottom: 1px solid #E7E8E2;
+    background: #fff;
+    padding: 0 0.2rem;
+}
+.searchBox p{
+    float: left;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+input.search{
+    float: left;
+    width: 9.4rem;
+    display: block;
+    outline: none;
+    height: 1rem;
+    border: none;
+    box-sizing: border-box;
+    padding-right: 0.2rem;
+    font-size: 0.14rem;
+}
+nav{
+    background: #E7E8E2;
+    height: 0.68rem;
+    padding: 0 0.4rem;
+    line-height: 0.68rem;
+    margin-bottom: 0.1rem;
+    font-size: 0.4rem;
+}
+section ul{
+    padding: 0 0.8rem 0 0.6rem;
+}
+section li{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    border-bottom: 1px solid #E7E8E2;
+    font-size: 0.4rem;
+}
+section ul li:last-child{
+    border-bottom: none;
+}
+div.leader{
+    position: fixed;
+    right: 0;
+    text-align: center;
+    background: #fff;
+    top: 0;
+    padding-top: 2.6rem;
+    padding-bottom: 2.2rem;
+    padding-right: 0.2rem;
+    padding-left: 0.1rem;
+}
+div.leader ul{
+    font-size: 0.12rem;
+    color: #ccc;
+    height: 100%;
+}
+div.leader ul li{
+    display: block;
+    height: 0.52rem;
+    width: 0.52rem;
+    line-height: 0.52rem;
+    border-radius: 50%;
+}
+.leader-on{
+    background: #18B3EB;
+    color: #fff;
+}
